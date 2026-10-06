@@ -41,17 +41,18 @@ export class CreatorIdentityRegistry {
       firstSeen: now,
       lastSeen: now,
       usageContext: 'Primary alias',
-      verificationStatus: 'MATCH_CONFIRMED',
+      verificationStatus: 'VERIFIED',
       relationshipStatus: 'CONFIRMED',
     };
 
     const identity: CreatorIdentity = {
       creatorId,
-      legalName: params.legalName,
+      canonicalName: params.legalName || params.primaryAlias,
       primaryAlias: params.primaryAlias,
       aliases: [primaryAliasObj],
       externalIds: {},
-      verificationStatus: 'MATCH_CONFIRMED',
+      verificationStatus: 'VERIFIED',
+      evidenceIds: [],
       createdAt: now,
       updatedAt: now,
     };
@@ -87,7 +88,7 @@ export class CreatorIdentityRegistry {
       firstSeen: new Date().toISOString(),
       lastSeen: new Date().toISOString(),
       usageContext: params.usageContext,
-      verificationStatus: 'MATCH_PROBABLE_REQUIRES_REVIEW',
+      verificationStatus: 'PARTIAL',
       relationshipStatus: 'PROBABLE',
     };
 
