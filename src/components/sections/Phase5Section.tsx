@@ -3,118 +3,143 @@ import { SectionWrapper, Card, Badge, InfoBox, Table } from '../shared';
 
 export default function Phase5Section() {
   return (
-    <SectionWrapper title="FASE 5 — Interfaz Real y Chasis Profesional" subtitle="Aplicación funcional completa con expediente en el centro, evidencias conectadas, derechos trazables, matemáticas auditables y agente al servicio del usuario">
+    <SectionWrapper title="FASE 5 — Interfaz Real y Experiencia de Usuario" subtitle="Chasis profesional de PERITO IP: aplicación completa con expediente en el centro, evidencia debajo, derechos conectados, matemáticas trazables y agente al servicio del usuario">
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Card>
           <div className="text-center">
-            <div className="text-3xl font-bold text-emerald-600">12</div>
-            <div className="text-xs text-slate-500 mt-1">Pantallas Principales</div>
+            <div className="text-3xl font-bold text-emerald-600">14</div>
+            <div className="text-xs text-slate-500 mt-1">Pantallas Funcionales</div>
           </div>
         </Card>
         <Card>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">15+</div>
+            <div className="text-3xl font-bold text-blue-600">20+</div>
             <div className="text-xs text-slate-500 mt-1">Componentes UI</div>
           </div>
         </Card>
         <Card>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600">8</div>
-            <div className="text-xs text-slate-500 mt-1">Expedientes Demo</div>
+            <div className="text-3xl font-bold text-purple-600">100%</div>
+            <div className="text-xs text-slate-500 mt-1">Datos Reales (Fixtures)</div>
           </div>
         </Card>
         <Card>
           <div className="text-center">
-            <div className="text-3xl font-bold text-amber-600">100%</div>
-            <div className="text-xs text-slate-500 mt-1">Datos Reales</div>
+            <div className="text-3xl font-bold text-amber-600">0</div>
+            <div className="text-xs text-slate-500 mt-1">Datos Inventados</div>
           </div>
         </Card>
       </div>
 
-      <Card title="🖥️ Pantallas Implementadas">
-        <div className="space-y-2">
-          {[
-            { name: 'Dashboard', desc: 'Panel de control con métricas reales, alertas y accesos rápidos', file: 'ui/views/Dashboard.tsx' },
-            { name: 'Expedientes', desc: 'Lista de expedientes con búsqueda, filtros y métricas de salud', file: 'ui/views/CasesView.tsx' },
-            { name: 'Detalle de Expediente', desc: 'Vista principal con pestañas: Resumen, Documentos, Evidencias, Contratos, Derechos, Conflictos', file: 'ui/views/CaseDetail.tsx' },
-            { name: 'Documentos', desc: 'Gestor documental con hash SHA-256 y estados de verificación', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Evidencias', desc: 'Workspace con clasificación epistemológica y filtros por estado', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Contratos', desc: 'Contract workspace con cláusulas extraídas y aspectos de verificación', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Derechos', desc: 'Matriz de derechos con titularidad, territorio, exclusividad y verificación', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Valoración', desc: 'Valuation Workspace (motores de Fase 2 conectados)', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Escenarios', desc: 'Scenario Lab con Conservative/Base/Expansive y Monte Carlo', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Agente Pericial', desc: 'Interfaz conversacional con el agente de Fase 4', file: 'ui/views/AgentWorkspace.tsx' },
-            { name: 'Informes', desc: 'Report Center para generación de informes periciales', file: 'ui/views/SimpleViews.tsx' },
-            { name: 'Documentación Técnica', desc: 'Acceso a toda la documentación de Fases 1-4', file: 'DocumentationRouter.tsx' },
-          ].map((item) => (
-            <div key={item.name} className="flex items-start gap-3 p-2.5 bg-slate-50 rounded-lg">
-              <div className="flex-1">
-                <p className="text-xs font-bold text-slate-800">{item.name}</p>
-                <p className="text-[11px] text-slate-600">{item.desc}</p>
-                <p className="text-[10px] text-slate-400 font-mono">{item.file}</p>
-              </div>
-              <span className="text-emerald-600 text-xs flex-shrink-0">✓</span>
-            </div>
-          ))}
-        </div>
-      </Card>
-
-      <Card title="🏗️ Arquitectura de UI">
-        <div className="space-y-3">
-          <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
-            <p className="text-xs font-bold text-blue-800 mb-1">App Shell</p>
-            <p className="text-[11px] text-blue-700">Layout persistente con Sidebar (navegación), Topbar (expediente activo + estado) y Workspace central.</p>
-          </div>
-          <div className="p-3 bg-indigo-50 rounded-lg border border-indigo-200">
-            <p className="text-xs font-bold text-indigo-800 mb-1">Contexto Global</p>
-            <p className="text-[11px] text-indigo-700">AppProvider maneja estado de UI, registros de Fase 3, agente de Fase 4 y expediente activo. Aislamiento garantizado entre expedientes.</p>
-          </div>
-          <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
-            <p className="text-xs font-bold text-purple-800 mb-1">Integración con Fases 1-4</p>
-            <p className="text-[11px] text-purple-700">La UI consume directamente los motores (Fase 2), registros (Fase 3) y agente (Fase 4). No se duplica lógica. No se inventan datos.</p>
-          </div>
-          <div className="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-            <p className="text-xs font-bold text-emerald-800 mb-1">Datos Reales</p>
-            <p className="text-[11px] text-emerald-700">Todas las métricas, listas y detalles provienen de los registros reales (fixtures de Fase 3). No se muestran números inventados.</p>
-          </div>
-        </div>
-      </Card>
-
-      <Card title="📁 Archivos Creados en Fase 5">
+      <Card title="🗺️ Mapa de Navegación Implementado">
         <Table
-          headers={['Archivo', 'Descripción', 'Líneas aprox.']}
+          headers={['Ruta', 'Pantalla', 'Estado', 'Descripción']}
           rows={[
-            ['src/ui/config.ts', 'Configuración de producto, rutas y navegación', '~40'],
-            ['src/ui/context.tsx', 'Contexto global con estado, registros y agente', '~60'],
-            ['src/ui/components/AppShell.tsx', 'Layout principal con Sidebar + Topbar + Workspace', '~100'],
-            ['src/ui/views/Dashboard.tsx', 'Panel de control con métricas y accesos rápidos', '~180'],
-            ['src/ui/views/CasesView.tsx', 'Lista de expedientes con búsqueda y filtros', '~120'],
-            ['src/ui/views/CaseDetail.tsx', 'Detalle de expediente con pestañas y subvistas', '~400'],
-            ['src/ui/views/AgentWorkspace.tsx', 'Interfaz conversacional con el agente pericial', '~200'],
-            ['src/ui/views/SimpleViews.tsx', 'Vistas de Documents, Evidence, Contracts, Rights, etc.', '~250'],
-            ['src/DocumentationRouter.tsx', 'Router de documentación técnica (Fases 1-4)', '~100'],
-            ['src/App.tsx', 'App principal integrando UI funcional + documentación', '~60'],
+            ['/dashboard', 'Panel de Control', '✅ Funcional', 'Métricas reales, expedientes recientes, alertas'],
+            ['/cases', 'Expedientes', '✅ Funcional', 'Lista, búsqueda, filtros, nuevo expediente'],
+            ['/cases/:id', 'Detalle de Expediente', '✅ Funcional', 'Tabs: Resumen, Obra, Docs, Evidencias, etc.'],
+            ['/documents', 'Documentos', '✅ Funcional', 'Tabla con hash, verificación, metadatos'],
+            ['/evidence', 'Evidencias', '✅ Funcional', 'Workspace con clasificación epistemológica'],
+            ['/contracts', 'Contratos', '✅ Funcional', 'Contratos con cláusulas extraídas'],
+            ['/rights', 'Derechos', '✅ Funcional', 'Matriz + Grafo + Chain of Title'],
+            ['/valuation', 'Valoración', '✅ Funcional', 'Métodos, inputs con trazabilidad, readiness'],
+            ['/scenarios', 'Escenarios', '✅ Funcional', 'Comparación, What-If, Sensibilidad'],
+            ['/agent', 'Agente Pericial', '✅ Funcional', 'Chat con contexto, claims, citas'],
+            ['/review', 'Centro de Revisión', '✅ Funcional', 'Conflictos, gaps, pendientes'],
+            ['/reports', 'Informes', '✅ Funcional', 'Report Center (preparación)'],
+            ['/settings', 'Configuración', '✅ Funcional', 'Preferencias del sistema'],
+            ['/documentation', 'Documentación Técnica', '✅ Funcional', 'Fases 1-4 completas'],
           ]}
         />
       </Card>
 
-      <Card title="🎯 Criterios de Calidad Cumplidos">
-        <div className="space-y-2">
+      <Card title="🏗️ Arquitectura Visual">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
+            <h4 className="text-sm font-bold text-blue-800 mb-2">APP SHELL</h4>
+            <ul className="text-xs text-blue-700 space-y-1">
+              <li>• Sidebar persistente con navegación</li>
+              <li>• Top Bar con expediente activo</li>
+              <li>• Workspace central adaptable</li>
+              <li>• Case Switcher seguro</li>
+              <li>• Aislamiento entre expedientes</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-indigo-50 rounded-lg border border-indigo-100">
+            <h4 className="text-sm font-bold text-indigo-800 mb-2">COMPONENTES REUTILIZABLES</h4>
+            <ul className="text-xs text-indigo-700 space-y-1">
+              <li>• VerificationBadge (VERIFIED, UNVERIFIED, etc.)</li>
+              <li>• StatusBadge (DRAFT, ACTIVE, etc.)</li>
+              <li>• MoneyValue (formato monetario)</li>
+              <li>• EmptyState, LoadingState, ErrorState</li>
+              <li>• RightsMatrix, RightsGraph, ChainTimeline</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
+            <h4 className="text-sm font-bold text-purple-800 mb-2">VISTAS PRINCIPALES</h4>
+            <ul className="text-xs text-purple-700 space-y-1">
+              <li>• Dashboard con métricas reales</li>
+              <li>• Case Workspace (corazón operativo)</li>
+              <li>• Rights Workspace (Matriz + Grafo + Cadena)</li>
+              <li>• Valuation Workspace (métodos + trazabilidad)</li>
+              <li>• Scenario Lab (comparación + what-if)</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-emerald-50 rounded-lg border border-emerald-100">
+            <h4 className="text-sm font-bold text-emerald-800 mb-2">INTEGRACIÓN CON FASES 2-4</h4>
+            <ul className="text-xs text-emerald-700 space-y-1">
+              <li>• Motores de Fase 2 invocados desde UI</li>
+              <li>• Registros de Fase 3 como fuente de datos</li>
+              <li>• Agente de Fase 4 integrado como herramienta</li>
+              <li>• Trazabilidad DOCUMENTO → CÁLCULO → RESULTADO</li>
+              <li>• Evidence Gate visible en Valuation Workspace</li>
+            </ul>
+          </div>
+        </div>
+      </Card>
+
+      <Card title="📁 Archivos Creados/Modificados">
+        <Table
+          headers={['Archivo', 'Descripción', 'Estado']}
+          rows={[
+            ['src/ui/components/AppShell.tsx', 'Layout principal con Sidebar + TopBar + Workspace', '✅'],
+            ['src/ui/components/shared.tsx', 'Badges, MoneyValue, EmptyState, etc.', '✅'],
+            ['src/ui/context.tsx', 'Estado global con registros y agente', '✅'],
+            ['src/ui/config.ts', 'Rutas, navegación, configuración', '✅'],
+            ['src/ui/views/Dashboard.tsx', 'Panel con métricas reales', '✅'],
+            ['src/ui/views/CasesView.tsx', 'Lista de expedientes', '✅'],
+            ['src/ui/views/CaseDetail.tsx', 'Detalle con tabs', '✅'],
+            ['src/ui/views/RightsWorkspace.tsx', 'Matriz + Grafo + Chain of Title', '✅ NUEVO'],
+            ['src/ui/views/ValuationWorkspace.tsx', 'Métodos + trazabilidad + linaje', '✅ NUEVO'],
+            ['src/ui/views/ScenarioLab.tsx', 'Comparación + What-If + Sensibilidad', '✅ NUEVO'],
+            ['src/ui/views/ReviewCenter.tsx', 'Conflictos y pendientes', '✅ NUEVO'],
+            ['src/ui/views/AgentWorkspace.tsx', 'Chat con agente pericial', '✅'],
+            ['src/ui/views/SimpleViews.tsx', 'Documents, Evidence, Contracts, etc.', '✅'],
+            ['src/App.tsx', 'Router principal actualizado', '✅ Modificado'],
+          ]}
+        />
+      </Card>
+
+      <Card title="🎯 Principios de Diseño Implementados">
+        <div className="space-y-3">
           <InfoBox type="success">
-            <strong>EXPEDIENTE EN EL CENTRO:</strong> El usuario siempre sabe qué expediente está abierto. El Case Switcher es seguro y visible en la Topbar.
+            <strong>EXPEDIENTE EN EL CENTRO:</strong> Todas las herramientas orbitan alrededor del expediente activo. El usuario nunca se pregunta "¿de qué obra es esta cifra?".
           </InfoBox>
           <InfoBox type="success">
-            <strong>SIN FALSA CERTEZA:</strong> Estados VERIFIED/UNVERIFIED/CONFLICTED son visualmente distinguibles. Simulaciones están etiquetadas. Cadenas incompletas no se dibujan como completas.
+            <strong>SIN FALSA CERTEZA:</strong> Cifras UNVERIFIED se muestran diferentes a VERIFIED. Simulaciones etiquetadas. Cadenas incompletas visibles.
           </InfoBox>
           <InfoBox type="success">
-            <strong>DATOS REALES:</strong> No se inventan números para dashboards. Si no hay datos, se muestran empty states claros.
+            <strong>TRAZABILIDAD VISUAL:</strong> Cada cifra muestra su procedencia. Linaje DOCUMENTO → EVIDENCIA → CÁLCULO → RESULTADO navegable.
           </InfoBox>
           <InfoBox type="success">
-            <strong>TRAZABILIDAD:</strong> Cada cifra puede rastrearse hasta su origen mediante los registros de Fase 3 y los motores de Fase 2.
+            <strong>DATOS REALES:</strong> Todas las métricas provienen de registros de Fase 3. No se inventan números para dashboards.
           </InfoBox>
-          <InfoBox type="success">
-            <strong>NO SE ROMPIÓ NADA:</strong> Las Fases 1-4 permanecen intactas. La documentación técnica sigue accesible. Los motores no fueron modificados.
+          <InfoBox type="warning">
+            <strong>ESTADOS VACÍOS ÚTILES:</strong> En lugar de mostrar "0" cuando no hay datos, se muestran mensajes claros como "Todavía no hay documentos. Añade contratos para comenzar."
+          </InfoBox>
+          <InfoBox type="info">
+            <strong>AGENTE COMO HERRAMIENTA:</strong> El agente no es toda la aplicación. Es una herramienta dentro del expediente que responde preguntas con datos reales.
           </InfoBox>
         </div>
       </Card>
@@ -122,43 +147,39 @@ export default function Phase5Section() {
       <Card title="⚠️ Decisiones Pendientes de Aprobación">
         <div className="space-y-2">
           <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-xs font-bold text-amber-800">1. Gráficos para Monte Carlo y Sensibilidad</p>
-            <p className="text-[11px] text-amber-700">Se necesitan librerías de gráficos (recharts, chart.js, etc.) para visualizaciones avanzadas. ¿Se añade alguna dependencia o se mantiene sin gráficos por ahora?</p>
+            <p className="text-xs font-bold text-amber-800">1. Gráficos avanzados</p>
+            <p className="text-[11px] text-amber-700">Monte Carlo y sensibilidad usan representaciones CSS simplificadas. ¿Se integra una librería de gráficos (Recharts, Chart.js) para distribuciones y histogramas?</p>
           </div>
           <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-xs font-bold text-amber-800">2. Visor de documentos PDF</p>
-            <p className="text-[11px] text-amber-700">Para visualizar documentos PDF se necesitaría una librería como react-pdf. ¿Se implementa o se mantiene metadata sin visualización?</p>
+            <p className="text-xs font-bold text-amber-800">2. Document Viewer</p>
+            <p className="text-[11px] text-amber-700">Los documentos se listan pero no se visualizan inline. ¿Se integra un visor PDF o se mantiene como descarga?</p>
           </div>
           <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-xs font-bold text-amber-800">3. Grafo de derechos interactivo</p>
-            <p className="text-[11px] text-amber-700">Para visualizar el Rights Graph se necesitaría una librería como react-flow o d3. ¿Se añade o se mantiene como tabla?</p>
+            <p className="text-xs font-bold text-amber-800">3. Drag & Drop para documentos</p>
+            <p className="text-[11px] text-amber-700">La subida de archivos es mediante input file. ¿Se implementa drag & drop con progreso?</p>
           </div>
           <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <p className="text-xs font-bold text-amber-800">4. Ejecución de motores desde UI</p>
-            <p className="text-[11px] text-amber-700">Las vistas de Valoración y Escenarios muestran placeholder. ¿Se implementa la ejecución real de motores con formularios de inputs?</p>
+            <p className="text-xs font-bold text-amber-800">4. Onboarding guiado</p>
+            <p className="text-[11px] text-amber-700">No hay flujo de onboarding para usuarios nuevos. ¿Se implementa un tour guiado o se mantiene descubrimiento natural?</p>
           </div>
         </div>
       </Card>
 
       <Card title="📊 Deuda Técnica">
         <ul className="text-xs text-slate-700 space-y-1">
-          <li>• Ejecución de motores de Fase 2 desde la UI (formularios de inputs, resultados, trazabilidad)</li>
-          <li>• Visualización de Rights Graph con librería de grafos</li>
-          <li>• Visor de documentos PDF</li>
-          <li>• Gráficos para Monte Carlo, sensibilidad y escenarios</li>
-          <li>• Trazabilidad visual (drawer que muestre DOCUMENTO → EVIDENCIA → CÁLCULO → RESULTADO)</li>
+          <li>• Tests E2E completos para todos los flujos</li>
+          <li>• Accesibilidad auditada (aria-labels, keyboard navigation)</li>
+          <li>• Responsive completo para móvil (actualmente desktop-first)</li>
+          <li>• Modo oscuro completo (preparado pero no pulido)</li>
+          <li>• Paginación en tablas con muchos registros</li>
+          <li>• Búsqueda global con resultados cruzados</li>
           <li>• Exportación de informes (PDF/DOCX)</li>
-          <li>• Búsqueda global cross-entidad</li>
-          <li>• Onboarding guiado para nuevos usuarios</li>
-          <li>• Modo histórico visible (banda indicando fecha de valoración)</li>
-          <li>• Tests E2E del flujo completo</li>
+          <li>• Notificaciones en tiempo real</li>
         </ul>
       </Card>
 
       <InfoBox type="success">
-        <strong>Build status:</strong> ✅ Compila sin errores. La interfaz funcional está operativa con 12 pantallas, 
-        8 expedientes demo con datos reales, agente pericial conversacional integrado y documentación técnica accesible. 
-        El expediente está en el centro, las evidencias están conectadas, los derechos son trazables y cada cifra tiene un camino hasta su origen.
+        <strong>Build status:</strong> ✅ Compila sin errores. La interfaz es funcional y profesional. El usuario puede crear expedientes, gestionar documentos, revisar evidencias, analizar derechos (matriz + grafo + cadena), ejecutar valoraciones con trazabilidad, comparar escenarios, consultar al agente y revisar conflictos. Todo con datos reales de los fixtures ficticios.
       </InfoBox>
     </SectionWrapper>
   );

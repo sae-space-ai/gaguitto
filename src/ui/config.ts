@@ -21,6 +21,7 @@ export type Route =
   | 'valuation'
   | 'scenarios'
   | 'agent'
+  | 'review'
   | 'reports'
   | 'settings'
   | 'documentation';
@@ -50,6 +51,7 @@ export const NAVIGATION: NavigationItem[] = [
   { route: 'valuation', label: 'Valoración', icon: '💰' },
   { route: 'scenarios', label: 'Escenarios', icon: '📊' },
   { route: 'agent', label: 'Agente Pericial', icon: '🤖' },
+  { route: 'review', label: 'Centro de Revisión', icon: '⚠️' },
   { route: 'reports', label: 'Informes', icon: '📑' },
   { route: 'settings', label: 'Configuración', icon: '⚙️' },
   { route: 'documentation', label: 'Documentación Técnica', icon: '📚' },

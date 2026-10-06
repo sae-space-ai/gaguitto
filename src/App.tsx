@@ -15,12 +15,14 @@ import {
   DocumentsView, 
   EvidenceView, 
   ContractsView, 
-  RightsView, 
   ValuationView, 
-  ScenariosView, 
   ReportsView,
   SettingsView 
 } from './ui/views/SimpleViews';
+import { RightsWorkspace } from './ui/views/RightsWorkspace';
+import { ValuationWorkspace } from './ui/views/ValuationWorkspace';
+import { ScenarioLab } from './ui/views/ScenarioLab';
+import { ReviewCenter } from './ui/views/ReviewCenter';
 import DocumentationRouter from './DocumentationRouter';
 
 function AppContent() {
@@ -41,11 +43,13 @@ function AppContent() {
       case 'contracts':
         return <ContractsView />;
       case 'rights':
-        return <RightsView />;
+        return <RightsWorkspace />;
       case 'valuation':
-        return <ValuationView />;
+        return <ValuationWorkspace />;
       case 'scenarios':
-        return <ScenariosView />;
+        return <ScenarioLab />;
+      case 'review':
+        return <ReviewCenter />;
       case 'agent':
         return <AgentWorkspace />;
       case 'reports':
