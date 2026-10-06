@@ -14,14 +14,17 @@ import RisksSection from './components/sections/RisksSection';
 import RoadmapSection from './components/sections/RoadmapSection';
 import OverviewSection from './components/sections/OverviewSection';
 
+import Phase2Section from './components/sections/Phase2Section';
+
 const sections = [
   { id: 'overview', label: 'Resumen Ejecutivo', icon: '📋' },
+  { id: 'phase2', label: 'FASE 2 — Motores Implementados', icon: '🧮' },
   { id: 'architecture', label: '1. Arquitectura Completa', icon: '🏗️' },
   { id: 'data-model', label: '2. Modelo de Datos', icon: '📊' },
   { id: 'database', label: '3. Esquema de Base de Datos', icon: '🗄️' },
   { id: 'agent', label: '4. Arquitectura del Agente', icon: '🤖' },
   { id: 'tools', label: '5. Herramientas Necesarias', icon: '🔧' },
-  { id: 'engines', label: '6. Motores Matemáticos', icon: '🧮' },
+  { id: 'engines', label: '6. Motores Matemáticos (Diseño)', icon: '📐' },
   { id: 'evidence', label: '7. Sistema de Evidencias', icon: '🔍' },
   { id: 'sources', label: '8. Sistema de Fuentes', icon: '📚' },
   { id: 'audit', label: '9. Sistema de Auditoría', icon: '🔒' },
@@ -37,6 +40,7 @@ export default function App() {
   const renderSection = () => {
     switch (activeSection) {
       case 'overview': return <OverviewSection />;
+      case 'phase2': return <Phase2Section />;
       case 'architecture': return <ArchitectureSection />;
       case 'data-model': return <DataModelSection />;
       case 'database': return <DatabaseSchemaSection />;
