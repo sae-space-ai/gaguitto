@@ -16,11 +16,13 @@ import OverviewSection from './components/sections/OverviewSection';
 
 import Phase2Section from './components/sections/Phase2Section';
 import Phase3Section from './components/sections/Phase3Section';
+import Phase4Section from './components/sections/Phase4Section';
 
 const sections = [
   { id: 'overview', label: 'Resumen Ejecutivo', icon: '📋' },
   { id: 'phase2', label: 'FASE 2 — Motores Cuantitativos', icon: '🧮' },
   { id: 'phase3', label: 'FASE 3 — Capa Probatoria', icon: '🔍' },
+  { id: 'phase4', label: 'FASE 4 — Agente Pericial', icon: '🤖' },
   { id: 'architecture', label: '1. Arquitectura Completa', icon: '🏗️' },
   { id: 'data-model', label: '2. Modelo de Datos', icon: '📊' },
   { id: 'database', label: '3. Esquema de Base de Datos', icon: '🗄️' },
@@ -44,6 +46,7 @@ export default function App() {
       case 'overview': return <OverviewSection />;
       case 'phase2': return <Phase2Section />;
       case 'phase3': return <Phase3Section />;
+      case 'phase4': return <Phase4Section />;
       case 'architecture': return <ArchitectureSection />;
       case 'data-model': return <DataModelSection />;
       case 'database': return <DatabaseSchemaSection />;
