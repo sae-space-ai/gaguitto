@@ -10,6 +10,7 @@ import Phase2Section from './components/sections/Phase2Section';
 import Phase3Section from './components/sections/Phase3Section';
 import Phase4Section from './components/sections/Phase4Section';
 import Phase5Section from './components/sections/Phase5Section';
+import Phase6Section from './components/sections/Phase6Section';
 import ArchitectureSection from './components/sections/ArchitectureSection';
 import DataModelSection from './components/sections/DataModelSection';
 import DatabaseSchemaSection from './components/sections/DatabaseSchemaSection';
@@ -29,6 +30,7 @@ const sections = [
   { id: 'phase3', label: 'FASE 3 — Capa Probatoria', icon: '🔍' },
   { id: 'phase4', label: 'FASE 4 — Agente Pericial', icon: '🤖' },
   { id: 'phase5', label: 'FASE 5 — Interfaz Real', icon: '🖥️' },
+  { id: 'phase6', label: 'FASE 6 — Biblioteca Real', icon: '📚' },
   { id: 'architecture', label: '1. Arquitectura Completa', icon: '🏗️' },
   { id: 'data-model', label: '2. Modelo de Datos', icon: '📊' },
   { id: 'database', label: '3. Esquema de Base de Datos', icon: '🗄️' },
@@ -53,6 +55,7 @@ export default function DocumentationRouter() {
       case 'phase3': return <Phase3Section />;
       case 'phase4': return <Phase4Section />;
       case 'phase5': return <Phase5Section />;
+      case 'phase6': return <Phase6Section />;
       case 'architecture': return <ArchitectureSection />;
       case 'data-model': return <DataModelSection />;
       case 'database': return <DatabaseSchemaSection />;

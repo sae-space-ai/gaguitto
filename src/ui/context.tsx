@@ -8,6 +8,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { Route, UIState } from './config';
 import { createFictitiousCases } from '../records';
 import { PericialAgent } from '../agent';
+import { createCatalogFixtures, CatalogFixtures } from '../catalog';
 
 interface AppContextType {
   // UI State
@@ -18,6 +19,7 @@ interface AppContextType {
   // Data
   registries: ReturnType<typeof createFictitiousCases>;
   agent: PericialAgent;
+  catalog: CatalogFixtures | null;
   
   // Active Case
   activeCase: ReturnType<typeof createFictitiousCases>['caseManagement'] extends infer T ? T extends { get: (id: string) => infer R } ? R | null : never : never;
@@ -42,6 +44,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     lineage: registries.lineage,
     bridge: registries.bridge,
   }));
+  
+  // Fase 6: Catálogo maestro
+  const [catalog, setCatalog] = useState<CatalogFixtures | null>(null);
+  
+  useEffect(() => {
+    createCatalogFixtures().then(setCatalog);
+  }, []);
   
   const [uiState, setUIState] = useState<UIState>({
     currentRoute: 'dashboard',
@@ -76,6 +85,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       toggleSidebar,
       registries,
       agent,
+      catalog,
       activeCase,
     }}>
       {children}

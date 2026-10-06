@@ -23,6 +23,7 @@ import { RightsWorkspace } from './ui/views/RightsWorkspace';
 import { ValuationWorkspace } from './ui/views/ValuationWorkspace';
 import { ScenarioLab } from './ui/views/ScenarioLab';
 import { ReviewCenter } from './ui/views/ReviewCenter';
+import { LibraryView } from './ui/views/LibraryView';
 import DocumentationRouter from './DocumentationRouter';
 
 function AppContent() {
@@ -50,6 +51,8 @@ function AppContent() {
         return <ScenarioLab />;
       case 'review':
         return <ReviewCenter />;
+      case 'library':
+        return <LibraryView />;
       case 'agent':
         return <AgentWorkspace />;
       case 'reports':
